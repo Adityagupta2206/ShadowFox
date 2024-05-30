@@ -1,288 +1,227 @@
-
-* {
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  line-height: 1.6;
-}
-
 .container {
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
+h1, h2, h3 {
+  margin: 0.5em 0;
+}
 
+p {
+  margin: 0.5em 0 1.5em;
+}
+
+/* Header Styles */
 header {
-  background-color: #1679AB;
+  background: #333;
   color: #fff;
-  padding: 20px 0;
+  padding: 1em 0;
 }
 
 header h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 28px;
-}
-
-nav ul {
-  list-style:none;
-}
-
-nav ul li {
   display: inline;
-  margin-right: 20px;
+  font-size: 1.5em;
+  margin-left: 1em;
 }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
+nav {
+  float: right;
 }
 
-#hero {
-  background-image: url('./assets/food.jpg');
-  background-size: cover;
-  color: #000000;
-  padding: 100px 0;
-  text-align: center;
-}
-
-#hero h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  margin-top: 90px;
-  
-}
-
-#hero p {
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff6600;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #2b62d8;
-}
-
-
-
-.feature {
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  background-color: #A0E9FF;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.feature img {
-  width: 150px;
-  height: auto;
-  margin-right: 20px;
-  border-radius: 10px 0 0 10px;
-  
+.nav-list li {
+  margin-right: 1em;
 }
 
-.feature-content {
-  flex: 1;
-  padding: 20px;
- 
-}
-
-.feature h3 {
-  font-family: 'Arial', sans-serif; 
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.feature p {
-  font-family: 'Arial', sans-serif; 
-  font-size: 18px;
-  color: #000000;
-  line-height: 1.6;
-}
-
-#about {
-  background: linear-gradient(135deg, #ff8c00, #ff0080);
+.nav-list li a {
   color: #fff;
-  padding: 80px 0;
-}
-
-#about .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-#about h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  font-weight: 700;
-}
-
-#about p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-
-#about h2::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background-color: #fff;
-  margin-top: 20px;
-}
-
-#about p:first-of-type {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-
-.color-box {
-  background-color: #66cccc; 
-  padding: 40px;
-  
-}
-
-#testimonials .container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-#testimonials h2 {
-  font-size: 36px;
-  color: #fff;
-  margin-bottom: 40px;
-}
-
-.testimonial {
-  margin-bottom: 40px;
-}
-
-.testimonial blockquote {
-  font-size: 24px;
-  font-style: italic;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.testimonial p {
-  font-size: 18px;
-  color: #fff;
+  text-decoration: none;
   font-weight: bold;
 }
 
-.testimonial blockquote,
-.testimonial p {
-  margin-left: 0; 
+.menu-toggle {
+  display: none;
+  cursor: pointer;
 }
 
-#newsletter {
-  background-color: #333;
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+}
+
+/* Hero Section Styles */
+#hero {
+  background: url('./assets/hero.jpg') no-repeat center center/cover;
   color: #fff;
-  padding: 10px 0;
+  text-align: center;
+  padding: 5em 0;
+}
+
+#hero .btn {
+  background: #ff6347;
+  color: #fff;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Product Section Styles */
+#products .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#products .card {
+  flex: 1 1 30%;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-#newsletter h2 {
-  margin-bottom: 20px;
+#products .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-#newsletter p {
-  margin-bottom: 40px;
+/* Feature Section Styles */
+#features .feature {
+  display: flex;
+  align-items: center;
+  margin: 2em 0;
 }
 
-#newsletter input[type="email"] {
-  padding: 10px;
-  width: 300px;
-  margin-right: 10px;
-  border: none;
+#features .feature img {
+  width: 200px;
+  height: auto;
+  margin-right: 2em;
+  border-radius: 5px;
+}
+
+#features .feature-content {
+  max-width: 600px;
+}
+
+/* About Section Styles */
+#about {
+  text-align: center;
+  padding: 2em 0;
+}
+
+/* Testimonials Section Styles */
+#testimonials .color-box {
+  background: #f4f4f4;
+  padding: 2em 0;
+}
+
+#testimonials .testimonial {
+  max-width: 800px;
+  margin: 1em auto;
+  text-align: center;
+}
+
+/* Newsletter Section Styles */
+#newsletter {
+  text-align: center;
+  padding: 2em 0;
+}
+
+#newsletter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#newsletter input {
+  padding: 0.5em;
+  margin-right: 0.5em;
+  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 #newsletter button {
-  padding: 10px 20px;
-  background-color: #ff6600;
+  background: #ff6347;
   color: #fff;
+  padding: 0.5em 1em;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
 }
 
-#newsletter button:hover {
-  background-color: #ff8533;
-}
-
-
+/* Footer Styles */
 footer {
-  background-color: #333;
+  background: #333;
   color: #fff;
-  padding: 20px 0;
   text-align: center;
+  padding: 1em 0;
 }
 
-footer p {
-  margin: 0;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+      float: none;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .nav-list {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .nav-list li {
+      margin: 1em 0;
+  }
+
+  #products .card {
+      flex: 1 1 100%;
+  }
+
+  #features .feature {
+      flex-direction: column;
+  }
+
+  #features .feature img {
+      margin-bottom: 1em;
+  }
 }
 
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 1.2em;
+  }
 
+  #hero {
+      padding: 2em 0;
+  }
 
-#products {
-  background-color: #f9f9f9;
-  padding: 100px 0;
-  text-align: center;
-}
+  #products .card img {
+      height: auto;
+  }
 
-.card-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 50px;
-}
-
-.card {
-  width: 300px;
-  margin: 20px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.card h3 {
-  margin-top: 20px;
-}
-
-.card p {
-  margin-top: 10px;
-  color: #666;
+  #features .feature img {
+      width: 100%;
+  }
 }
